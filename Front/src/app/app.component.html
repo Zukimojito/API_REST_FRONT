@@ -1,0 +1,8 @@
+<div class="container-main">
+  <app-navbar (logout)="logout()" [user]="user$ | async"></app-navbar>
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+
+  <app-footer></app-footer>
+</div>

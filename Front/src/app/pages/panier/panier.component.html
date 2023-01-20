@@ -1,0 +1,16 @@
+<mat-card-content>
+    <h1>Your Cart</h1>
+    <div class="cartContainer">
+        <div *ngFor="let product of productAll">
+            <div class="col-product">
+                <app-card-panier [item]="product"></app-card-panier>
+                <div class="button">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="total">
+        <h2>Total: {{PrixTotal | currency}}</h2>
+        <button class="buy" (click)="Buy()">Buy</button>
+    </div>
+</mat-card-content>

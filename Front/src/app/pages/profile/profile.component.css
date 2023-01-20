@@ -1,0 +1,48 @@
+.profile {
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+mat-card {
+    width: 100%;
+    max-width: 500px;
+}
+
+mat-card-title {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.profile form {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field {
+    margin: 5px 0;
+}
+
+button {
+    margin: 20px 0;
+    height: 35px;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    font-size: 22px;
+    background: #885d0d;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+button:hover {
+    background: #1f0d88;
+    opacity: 0.8;
+}
+
+.updateInfo {
+    color: green;
+}

@@ -1,0 +1,13 @@
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.container-main {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+}

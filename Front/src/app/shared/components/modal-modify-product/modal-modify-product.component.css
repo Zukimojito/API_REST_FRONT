@@ -1,0 +1,38 @@
+.containerLogin {
+    padding: 20px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 600px;
+    min-width: 600;
+}
+
+mat-card {
+    width: 100%;
+    max-width: 500px;
+}
+
+mat-card-title {
+    text-align: center;
+    font-size: 28px;
+    margin: 20px 0;
+}
+
+.containerLogin form {
+    display: flex;
+    flex-direction: column;
+}
+
+mat-form-field {
+    margin: 5px 0;
+}
+
+button {
+    margin: 20px 0;
+    height: 75px;
+    border-radius: 5px;
+    color: white;
+    font-size: 22px;
+    background: #0d8869;
+    cursor: pointer;
+}

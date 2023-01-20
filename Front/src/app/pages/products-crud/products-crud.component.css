@@ -1,0 +1,36 @@
+mat-card-content {
+    display: flex;
+    flex-wrap: wrap;
+    width: 1330px;
+    align-items: center;
+    margin: auto;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 20px;
+}
+
+mat-card-title {
+    font-size: 36px;
+}
+
+.mat-mdc-card-content:first-child,
+.mat-mdc-card-content:last-child {
+    padding: 0;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px;
+}
+
+.btn button {
+    width: 120px;
+}

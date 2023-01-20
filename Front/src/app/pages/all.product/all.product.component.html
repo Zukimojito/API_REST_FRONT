@@ -1,0 +1,17 @@
+<mat-card-content>
+    <div class="searchBar">
+        <input type="text" placeholder="Search" />
+    </div>
+
+    <div class="cartContainer">
+        <div *ngFor="let product of products">
+            <div class="col-product">
+                <app-cardProduct [item]="product"></app-cardProduct>
+                <div class="button">
+                    <button class="info" (click)="ToRefProduct(product.id)">View product</button>
+                    <button class="buy" (click)="AddToCard(product)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</mat-card-content>

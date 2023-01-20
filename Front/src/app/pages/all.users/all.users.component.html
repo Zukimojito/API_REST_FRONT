@@ -1,0 +1,72 @@
+<mat-card>
+    <mat-card-title>All users</mat-card-title>
+    <mat-error *ngIf="error">
+        {{ error }}
+    </mat-error>
+
+    <div class="updateInfo" *ngIf="updateInfo">
+        {{ updateInfo }}
+    </div>
+    <mat-card-content>
+        <form [formGroup]="form">
+            <table class="AllUser">
+                <thead>
+                    <tr>
+                        <th scope="col">ID</th>
+                        <th scope="col">Username</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Address</th>
+                        <th scope="col">Role</th>
+                        <th scope="col">Modify</th>
+                        <th scope="col">Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let i of user; let index = index">
+                        <td>{{ i.id }}</td>
+                        <td>
+                            <div *ngIf="editing !== index">
+                                {{ i.username }}
+                            </div>
+                            <div *ngIf="editing === index">
+                                <input [formControlName]="'username'" (blur)="editing !== index && (editing = -1)">
+                            </div>
+                        </td>
+                        <td>
+                            <div *ngIf="editing !== index">
+                                {{ i.email }}
+                            </div>
+                            <div *ngIf="editing === index">
+                                <input [formControlName]="'email'" (blur)="editing !== index && (editing = -1)">
+                            </div>
+                        </td>
+                        <td>
+                            <div *ngIf="editing !== index">
+                                {{ i.adresse }}
+                            </div>
+                            <div *ngIf="editing === index">
+                                <input [formControlName]="'adresse'" (blur)="editing !== index && (editing = -1)">
+                            </div>
+                        </td>
+                        <td>
+                            <div *ngIf="editing !== index">
+                                {{ i.role }}
+                            </div>
+                            <div *ngIf="editing === index">
+                                <input [formControlName]="'role'" (blur)="editing !== index && (editing = -1)">
+                            </div>
+                        </td>
+                        <td>
+                            <button mat-raised-button color="primary" *ngIf="!saving"
+                                (click)="editing = index; saving = true; onChange()">Modify</button>
+                            <button mat-raised-button color="primary" *ngIf="saving"
+                                (click)="editing = -1; saving = false; onSubmit() ">Validate</button>
+                        </td>
+                        <td><button mat-raised-button color="warn" (click)="onDelete(i.id)">Delete</button></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </form>
+    </mat-card-content>
+</mat-card>

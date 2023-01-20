@@ -1,0 +1,40 @@
+<nav>
+    <div *ngIf="!user" class="navbarContainers">
+
+        <div class="main">
+            <ul>
+                <!-- [routerLinkActiveOptions]="{ exact : true } pour le router '/' background color active ou pas -->
+                <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true }">Home</li>
+                <!-- <li><a routerLink="/products">Products</a></li> -->
+                <li [routerLink]="['contact']" routerLinkActive="active">Contact</li>
+            </ul>
+        </div>
+
+        <div class=" option">
+            <ul>
+                <li routerLink="/login" routerLinkActive="active">Login</li>
+                <li routerLink="/register" routerLinkActive="active">Register</li>
+            </ul>
+        </div>
+    </div>
+
+    <div *ngIf="user" class="navbarContainers">
+
+        <div class="main">
+            <ul>
+                <li routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact : true }">Home</li>
+                <li [routerLink]="['contact']" routerLinkActive="active">Contact</li>
+                <li routerLink="/users" routerLinkActive="active">Users</li>
+                <li routerLink="/dashboard" routerLinkActive="active">Dashboard</li>
+            </ul>
+        </div>
+
+        <div class=" option">
+            <ul>
+                <li (click)="SendToPanier()">🛒{{productNb.length}}</li>
+                <li routerLink="/profile" routerLinkActive="active">Profile</li>
+                <li (click)="logout.emit(true)" routerLinkActive="active">Logout</li>
+            </ul>
+        </div>
+    </div>
+</nav>

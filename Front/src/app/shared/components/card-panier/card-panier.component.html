@@ -1,0 +1,12 @@
+<div class="cart-product">
+    <div class="ProductImage">
+        <img *ngIf="item.image" src="/assets/{{item.image}}" alt="{{item.name}}">
+    </div>
+    <div class="productContainer">
+        <h1>{{item.name}}</h1>
+        <div class="product-info">
+            <p class="description">{{item.description}}</p>
+            <p class="price">{{item.price | currency}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<mat-card class="card">
+    <mat-card-content>
+
+        <div class="sidebar">
+            <img src="../../../assets/sidebar1.jpg" alt="">
+            <img src="../../../assets/sidebar2.jpg" alt="">
+        </div>
+
+        <div class="main">
+            <mat-card-title>Dairy products are healthy</mat-card-title>
+
+            <div class="content">
+                <mat-card class="Allproduct">
+                    <button mat-raised-button color="primary" [routerLink]="['products']">View All Products</button>
+                </mat-card>
+
+                <mat-card class="Userproduct">
+                    <button mat-raised-button color="primary" (click)="ToRef()">View your Products</button>
+                </mat-card>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <img src="../../../assets/sidebar3.jpg" alt="">
+            <img src="../../../assets/sidebar4.jpg" alt="">
+        </div>
+    </mat-card-content>
+</mat-card>

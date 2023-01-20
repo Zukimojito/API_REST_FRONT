@@ -1,0 +1,30 @@
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-title {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 20px;
+}
+
+.modal-header button {
+    background: transparent;
+    cursor: pointer;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 20px;
+}
+
+.modal-body {
+    margin: 20px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+}

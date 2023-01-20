@@ -1,0 +1,13 @@
+<mat-card-content>
+    <div class="header">
+        <mat-card-title>You products</mat-card-title>
+        <button mat-raised-button color="primary" (click)="openModal()">New product</button>
+    </div>
+    <div class="container" *ngFor="let product of products">
+        <app-cardProduct [item]="product"></app-cardProduct>
+        <div class="btn">
+            <button mat-raised-button color="primary" (click)="modifyModal(product.id)">Modify</button>
+            <button mat-raised-button color="warn" (click)="deleteProduct(product.id)">Delete</button>
+        </div>
+    </div>
+</mat-card-content>

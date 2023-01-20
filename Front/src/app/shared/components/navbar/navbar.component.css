@@ -1,0 +1,61 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+.navbarContainers {
+    background-color: salmon;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.main {
+    height: 100%;
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.option {
+    height: 100%;
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+}
+
+.navbarContainers ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbarContainers .main li {
+    margin: 0 20px;
+    font-size: 24px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbarContainers .main li:hover {
+    color: #00afa6;
+}
+
+.navbarContainers .option li {
+    margin: 0 15px;
+    font-size: 16px;
+    color: white;
+    cursor: pointer;
+}
+
+.navbarContainers .option li:hover {
+    color: #00afa6;
+}
+
+.active {
+    text-decoration: underline;
+}

@@ -1,0 +1,48 @@
+mat-card {
+    margin: 20px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+    width: 100%;
+    max-width: 1200px;
+    display: block;
+    margin: 25px auto;
+    padding: 20px;
+}
+
+mat-card-title {
+    text-align: center;
+    font-size: 36px;
+    margin: 20px 0;
+    background: sandybrown;
+    color: aliceblue;
+}
+
+
+.AllUser {
+    width: 100%;
+    padding: 10px;
+}
+
+.AllUser table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #ccc;
+}
+
+.updateInfo {
+    color: green;
+}
